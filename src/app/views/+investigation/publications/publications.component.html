@@ -16,25 +16,25 @@
 <div
   class="container"
   fxLayout="row wrap"
-  fxLayoutAlign="center start"
+  fxLayoutAlign="center stretch"
   fxLayoutAlign.lt-md="center center"
 >
   <div
     *ngFor="let d of data"
     class="item"
     style="margin: 20px;"
-    fxFlex="1 1 45%"
+    fxFlex="1 1 24%"
     fxFlex.lt-md="1 1 100%"
   >
 
-    <mat-card class="card" [@FadeInOut]>
-      <mat-card-content>
+    <mat-card class="card" [@FadeInOut] style="min-height: 300px;">
+      <mat-card-content fxLayout="column wrap" fxLayoutAlign="stretch center">
         <a [href]="d.link" target="_blank" style="text-transform: uppercase;text-decoration: none;">
           <h3>{{d.name}}</h3>
         </a>
 
         <img
-              fxFlex="1 1 60%"
+              width="250px"
               [src]="d.logo"
         />
       </mat-card-content>

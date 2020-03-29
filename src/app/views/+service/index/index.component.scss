@@ -1,26 +1,8 @@
-
-.container {
-  padding: 30px 30px 10px 30px;
+a.service-item {
+  color: #348b53;
 }
 
-.item {
-  margin: 5px;
+a.service-item:hover > h3 {
+  color: #1a773ade;
 }
 
-.green {
-  background: linear-gradient(100deg, #13632f, #00c853);
-  color: white;
-  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.2),
-    0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
-}
-
-.white {
-  background: linear-gradient(100deg, #fff, #fff);
-  color: #13632f;
-  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.2),
-    0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
-}
-
-p.item, a.item {
-  color: #13632f;
-}

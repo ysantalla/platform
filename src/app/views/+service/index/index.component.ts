@@ -1,31 +1,56 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { FadeInOut } from '@app/core/animations/app.animation';
+
+interface IServices {
+  type: string;
+  list: {
+    name: string;
+    link: string;
+  }[];
+}
 
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.scss'],
-  animations: [
-    trigger("fadeInOut", [
-      state(
-        "void",
-        style({
-          opacity: 0
-        })
-      ),
-      transition("void <=> *", animate(1000))
-    ])
-  ]
+  animations: [FadeInOut]
 })
 export class IndexComponent implements OnInit {
-  color: string;
-  otherColor: string;
+
+  data: IServices[];
 
   constructor() {}
 
   ngOnInit() {
-    this.color = 'white';
-    this.otherColor = 'green';
+
+    this.data = [
+      {
+        type: 'UPRedes',
+        list: [
+          {
+            name: 'Correo Profesores',
+            link: 'https://correo.upr.edu.cu'
+          },
+          {
+            name: 'Correo Estudiantes',
+            link: 'https://estudiantes.upr.edu.cu'
+          },
+          {
+            name: 'Proxy Go',
+            link: 'https://proxy-go.upr.edu.cu'
+          },
+        ]
+      },
+      {
+        type: 'CRAI',
+        list: [
+          {
+            name: 'Centro de Recursos para el Aprendizaje y la Investigación',
+            link: 'https://crai.upr.edu.cu/'
+          }
+        ]
+      }
+    ];
   }
 
 }
