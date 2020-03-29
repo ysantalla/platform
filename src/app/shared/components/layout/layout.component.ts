@@ -130,12 +130,12 @@ export class LayoutComponent implements OnInit {
         },
         {
           heading: 'linesinvestigation',
-          link: '/investigation/linesinvestigation'
+          link: '/investigation/lines'
         },
-        {
-          heading: 'investigationgroups',
-          link: '/investigation/investigationgroups'
-        },
+        // {
+        //   heading: 'investigationgroups',
+        //   link: '/investigation/groups'
+        // },
         {
           heading: 'studycenter',
           link: '/investigation/studycenter'

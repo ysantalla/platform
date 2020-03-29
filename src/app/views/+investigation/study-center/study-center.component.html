@@ -1,1 +1,44 @@
-<p>study-center works!</p>
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <div
+    style="padding-top: 10px;"
+    fxFlex="1 1 90%"
+    fxFlex.lt-md="1 1 90%"
+    [@FadeInOut]
+    fxLayout="row wrap"
+    fxLayoutAlign="start center"
+  >
+    <h1 class="">{{'studycenter' | transloco}}</h1>
+  </div>
+</div>
+
+<mat-divider style="margin: 0 3% 3%;"></mat-divider>
+
+<div
+  class="container"
+  fxLayout="row wrap"
+  fxLayoutAlign="center start"
+  fxLayoutAlign.lt-md="center center"
+>
+  <div
+    *ngFor="let d of data"
+    class="item"
+    style="margin: 20px;"
+    fxFlex="1 1 45%"
+    fxFlex.lt-md="1 1 100%"
+  >
+
+    <mat-card class="card" [@FadeInOut]>
+      <mat-card-content>
+        <a [href]="d.link" target="_blank" style="text-transform: uppercase;text-decoration: none;">
+          <h3>{{d.name}}</h3>
+        </a>
+
+        <img
+              fxFlex="1 1 60%"
+              [src]="d.logo"
+        />
+      </mat-card-content>
+
+    </mat-card>
+  </div>
+</div>

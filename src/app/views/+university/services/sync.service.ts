@@ -15,6 +15,6 @@ export class SyncService {
   ) {}
 
   getBoardDirectors(): Observable<any> {
-    return this.httpClient.get<any>(`${env.apiURL}/countBoardDirectors`);
+    return this.httpClient.get<any>(`${env.productionAppUrl}/countBoardDirectors`);
   }
 }

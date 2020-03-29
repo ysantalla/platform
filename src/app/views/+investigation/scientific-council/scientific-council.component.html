@@ -39,7 +39,7 @@
     fxFlex.lt-md="1 1 100%"
   >
 
-    <mat-card class="card">
+    <mat-card class="card" [@FadeInOut]>
       <mat-card-header>
         <div mat-card-avatar class="header-image"></div>
         <mat-card-title><h3>{{data.cargo}}</h3></mat-card-title>
@@ -74,12 +74,12 @@
   <div
     *ngFor="let data of cc"
     class="item"
-    style="margin: 4px;"
-    fxFlex="1 1 30%"
+    style="margin: 20px;"
+    fxFlex="1 1 45%"
     fxFlex.lt-md="1 1 100%"
   >
 
-    <mat-card class="card">
+    <mat-card class="card" [@FadeInOut]>
       <mat-card-header>
         <div mat-card-avatar class="header-image"></div>
         <mat-card-title><h3>{{data.nombre}}</h3></mat-card-title>

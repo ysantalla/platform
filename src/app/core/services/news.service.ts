@@ -17,7 +17,7 @@ export class NewsService {
   ) { }
 
   getLastNews(): Observable<News[]> {
-    return this.httpClient.get<News[]>(`${env.apiURL}/getNews`).pipe(
+    return this.httpClient.get<News[]>(`${env.productionAppUrl}/getNews`).pipe(
       map((result: any) => {
         const listNews: News[] = [];
         result.data.forEach(news => {
@@ -41,7 +41,7 @@ export class NewsService {
   }
 
   getInterest(): Observable<News[][]> {
-    return this.httpClient.get<News[]>(`${env.apiURL}/getInterest`).pipe(
+    return this.httpClient.get<News[]>(`${env.productionAppUrl}/getInterest`).pipe(
       map((result: any) => {
         const listNews: News[][] = [];
         let cont = 0;
@@ -83,7 +83,7 @@ export class NewsService {
   }
 
   getEvents(): Observable<News[]> {
-    return this.httpClient.get<News[]>(`${env.apiURL}/getEvents`).pipe(
+    return this.httpClient.get<News[]>(`${env.productionAppUrl}/getEvents`).pipe(
       map((result: any) => {
         const listNews: News[] = [];
         result.data.forEach(news => {

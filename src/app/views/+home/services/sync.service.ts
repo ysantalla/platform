@@ -15,22 +15,22 @@ export class SyncService {
   ) {}
 
   getCountStudents(): Observable<any> {
-    return this.httpClient.get<any>(`${env.apiURL}/countStudents`);
+    return this.httpClient.get<any>(`${env.productionAppUrl}/countStudents`);
   }
 
   getCountProfesors(): Observable<any> {
-    return this.httpClient.get<any>(`${env.apiURL}/countProfesors`);
+    return this.httpClient.get<any>(`${env.productionAppUrl}/countProfesors`);
   }
 
   getCountDoctors(): Observable<any> {
-    return this.httpClient.get<any>(`${env.apiURL}/countDoctors`);
+    return this.httpClient.get<any>(`${env.productionAppUrl}/countDoctors`);
   }
 
   getCountMasters(): Observable<any> {
-    return this.httpClient.get<any>(`${env.apiURL}/countMasters`);
+    return this.httpClient.get<any>(`${env.productionAppUrl}/countMasters`);
   }
 
   getCountProjects(): Observable<any> {
-    return this.httpClient.get<any>(`${env.apiURL}/countProjects`);
+    return this.httpClient.get<any>(`${env.productionAppUrl}/countProjects`);
   }
 }

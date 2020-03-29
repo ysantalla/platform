@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  FadeInOut,
-  EnterLeft,
-  EnterRight
+  FadeInOut
 } from '@app/core/animations/app.animation';
 import { ScrollService } from '@app/core/services/scroll.service';
 import { Observable } from 'rxjs';
@@ -25,8 +23,6 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
       </div>
     </div>
 
-
-
     <mat-divider style="margin: 0 3% 3%;"></mat-divider>
 
     <!-- Faculties -->
@@ -41,7 +37,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
         <ng-template #first>
           <img
             fxFlex="1 1 49%"
-            [@EnterLeft]
+            [@FadeInOut]
             fxFlex.lt-md="1 1 100%"
             [src]="faculty.logo"
             *ngIf="minScrollValue > i * numberScroll"
@@ -49,7 +45,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 
           <div
             class="item mat-elevation-z8"
-            [@EnterRight]
+            [@FadeInOut]
             fxFlex="1 1 39%"
             fxFlex.lt-md="1 1 100%"
             *ngIf="minScrollValue > i * numberScroll"
@@ -72,7 +68,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
         <ng-template #second>
           <div
             class="item mat-elevation-z8"
-            [@EnterLeft]
+            [@FadeInOut]
             fxFlex="1 1 39%"
             fxFlex.lt-md="1 1 100%"
             *ngIf="minScrollValue > i * numberScroll"
@@ -92,7 +88,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
           </div>
           <img
             fxFlex="1 1 49%"
-            [@EnterRight]
+            [@FadeInOut]
             fxFlex.lt-md="1 1 100%"
             [src]="faculty.logo"
             *ngIf="minScrollValue > i * numberScroll"
@@ -123,6 +119,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
         padding: 30px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        min-height: 350px;
       }
 
       p.carer,
@@ -131,7 +128,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
       }
     `
   ],
-  animations: [FadeInOut, EnterLeft, EnterRight]
+  animations: [FadeInOut, FadeInOut, FadeInOut]
 })
 export class UndergraduateComponent implements OnInit {
   minScrollValue = 20;

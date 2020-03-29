@@ -1,1 +1,39 @@
-<p>lines-investigation works!</p>
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <div
+    style="padding-top: 10px;"
+    fxFlex="1 1 90%"
+    fxFlex.lt-md="1 1 90%"
+    [@FadeInOut]
+    fxLayout="row wrap"
+    fxLayoutAlign="start center"
+  >
+    <h1 class="">{{'linesinvestigation' | transloco}}</h1>
+  </div>
+</div>
+
+<mat-divider style="margin: 0 3% 3%;"></mat-divider>
+
+<div
+  class="container"
+  fxLayout="row wrap"
+  fxLayoutAlign="center start"
+  fxLayoutAlign.lt-md="center center"
+>
+  <div
+    *ngFor="let data of lines"
+    class="item"
+    style="margin: 20px;"
+    fxFlex="1 1 45%"
+    fxFlex.lt-md="1 1 100%"
+  >
+
+    <mat-card class="card" [@FadeInOut]>
+      <mat-card-header>
+        <mat-card-title><h3>{{data.name}}</h3></mat-card-title>
+        <mat-card-subtitle><h4>{{data.coordinator.grade}} {{data.coordinator.name}}</h4></mat-card-subtitle>
+        <mat-card-subtitle><a [href]="'mailto://'+data.coordinator.email">{{data.coordinator.email}}</a></mat-card-subtitle>
+      </mat-card-header>
+
+    </mat-card>
+  </div>
+</div>

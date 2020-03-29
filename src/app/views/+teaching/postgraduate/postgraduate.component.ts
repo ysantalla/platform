@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {
-  FadeInOut,
-  EnterLeft,
-  EnterRight
+  FadeInOut
 } from '@app/core/animations/app.animation';
 import { ScrollService } from '@app/core/services/scroll.service';
 import { Observable } from 'rxjs';
@@ -37,18 +35,21 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
         <div *ngIf="e || (isHandset$ | async) === true; then first; else second"></div>
 
         <ng-template #first>
-          <img
-            fxFlex="1 1 49%"
-            [@EnterLeft]
-            fxFlex.lt-md="1 1 100%"
-            [src]="post.logo"
-            *ngIf="minScrollValue > i * numberScroll"
-          />
+          <div fxFlex="1 1 45%"
+              [@FadeInOut]
+              fxFlex.lt-md="1 1 100%"
+              *ngIf="minScrollValue > i * numberScroll"
+            >
+            <img
+              fxFlex="1 1 70%"
+              [src]="post.logo"
+            />
+          </div>
 
           <div
             class="item mat-elevation-z8"
-            [@EnterRight]
-            fxFlex="1 1 39%"
+            [@FadeInOut]
+            fxFlex="1 1 45%"
             fxFlex.lt-md="1 1 100%"
             *ngIf="minScrollValue > i * numberScroll"
           >
@@ -70,7 +71,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
         <ng-template #second>
           <div
             class="item mat-elevation-z8"
-            [@EnterLeft]
+            [@FadeInOut]
             fxFlex="1 1 39%"
             fxFlex.lt-md="1 1 100%"
             *ngIf="minScrollValue > i * numberScroll"
@@ -88,15 +89,19 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
               </li>
             </ul>
           </div>
-          <img
-            fxFlex="1 1 49%"
-            [@EnterRight]
-            fxFlex.lt-md="1 1 100%"
-            [src]="post.logo"
-            *ngIf="minScrollValue > i * numberScroll"
-          />
+          <div fxFlex="1 1 45%"
+              [@FadeInOut]
+              fxFlex.lt-md="1 1 100%"
+              *ngIf="minScrollValue > i * numberScroll"
+            >
+            <img
+              fxFlex="1 1 70%"
+              [src]="post.logo"
+            />
+          </div>
         </ng-template>
       </div>
+      <br style="margin: 3%;" />
     </article>
   `,
   styles: [
@@ -122,6 +127,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
         min-height: 200px;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        min-height: 350px;
       }
 
       p.carer,
@@ -130,7 +136,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
       }
     `
   ],
-  animations: [FadeInOut, EnterLeft, EnterRight]
+  animations: [FadeInOut, FadeInOut, FadeInOut]
 })
 export class PostgraduateComponent implements OnInit {
   minScrollValue = 20;

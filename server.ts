@@ -97,7 +97,7 @@ app.get('/api/countDoctors', cache('15 minutes'), async (req, res) => {
 
 app.get('/api/getNews', cache('15 minutes'), async (req, res) => {
   try {
-    const r = await axios.get(`${env.newsUrl}`);
+    const r = await axios.get(`${env.newsUrl}/posts?tags=51&per_page=4&page=1&_embed`);
     res.json({data: r.data});
   } catch (error) {
     console.log(error);
@@ -107,7 +107,7 @@ app.get('/api/getNews', cache('15 minutes'), async (req, res) => {
 
 app.get('/api/getInterest', cache('15 minutes'), async (req, res) => {
   try {
-    const r = await axios.get(`${env.interestUrl}`);
+    const r = await axios.get(`${env.newsUrl}/posts?tags=47&per_page=9&page=1&_embed`);
     res.json({data: r.data});
   } catch (error) {
     res.json({data: []});
@@ -116,7 +116,7 @@ app.get('/api/getInterest', cache('15 minutes'), async (req, res) => {
 
 app.get('/api/getEvents', cache('15 minutes'), async (req, res) => {
   try {
-    const r = await axios.get(`${env.eventsUrl}`);
+    const r = await axios.get(`${env.newsUrl}/posts?tags=48&per_page=5&page=1&_embed`);
     res.json({data: r.data});
   } catch (error) {
     res.json({data: []});

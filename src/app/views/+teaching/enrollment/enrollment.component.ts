@@ -128,8 +128,8 @@ interface Students {
     <article
       [@FadeInOut]
     >
-      <div class="container" fxLayout="row wrap" fxLayoutAlign="center start">
-        <div class="item mat-elevation-z8" fxFlex="1 1 45%" fxFlex.lt-md="1 1 90%" [@FadeInOut] fxLayout="row wrap" fxLayoutAlign="start center" >
+      <div class="container" fxLayout="row wrap" fxLayoutAlign="center">
+        <div class="item mat-elevation-z8" fx fxFlex="1 1 45%" fxFlex.lt-md="1 1 90%" [@FadeInOut] fxLayout="row wrap" fxLayoutAlign="start start" >
            <h1 class="mat-h1" style="color: white">{{studentN.tipo}}</h1>
            <h2 class="mat-h2" style="color: white">{{studentN.message}}</h2>
             <ul style="list-style: none;">
@@ -141,7 +141,7 @@ interface Students {
             </ul>
         </div>
 
-        <div class="item mat-elevation-z8" fxFlex="1 1 45%" fxFlex.lt-md="1 1 90%" [@FadeInOut] fxLayout="row wrap" fxLayoutAlign="start center" >
+        <div class="item mat-elevation-z8" fxFlex="1 1 45%" fxFlex.lt-md="1 1 90%" [@FadeInOut] fxLayout="row wrap" fxLayoutAlign="start start" >
            <h1 class="mat-h1" style="color: white">{{studentE.tipo}}</h1>
            <h2 class="mat-h2" style="color: white">{{studentE.message}}</h2>
             <ul style="list-style: none;">
