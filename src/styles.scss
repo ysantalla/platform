@@ -1,0 +1,171 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$primary: mat-palette($mat-green, A700);
+$accent:  mat-palette($mat-blue, 800);
+
+// The warn palette is optional (defaults to red).
+$warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$candy-app-theme: mat-light-theme($primary, $accent, $warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($candy-app-theme);
+
+/*Define the @font-face MyriadPro*/
+@font-face {
+  font-family: 'MyriadPro-Light';
+  src: url('assets/fonts/upr/MyriadPro-Light.otf');
+}
+
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: url('assets/fonts/upr/MyriadPro-Regular.otf');
+}
+
+@font-face {
+  font-family: 'MyriadPro-It';
+  src: url('assets/fonts/upr/MyriadPro-It.otf');
+}
+
+body {
+  font-family: 'MyriadPro-Light';
+}
+
+h1, h2, h3 {
+  line-height: 35px;
+}
+
+// h1,h2,h3,h4,h5{
+//   font-weight: 200;
+// }
+
+h1{
+  font-family: 'MyriadPro-Light';
+  color: #13632f;
+  font-size: 45px;
+}
+
+h2{
+  font-family: 'MyriadPro-Regular';
+  font-size: 40px;
+  color: #333;
+}
+
+h3{
+  font-family: 'MyriadPro-Regular';
+  font-size: 25px;
+  color: #13632f;
+}
+
+h4{
+  font-family: 'MyriadPro-Regular';
+  font-size: 18px;
+}
+
+h5{
+  font-family: 'MyriadPro-It';
+  font-size: 16px;
+}
+
+p, li, label{
+  font-family: 'MyriadPro-Light';
+  font-size: 20px;
+  color: #333;
+}
+
+a{
+  font-family: 'MyriadPro-Regular';
+  font-size: 16px;
+  cursor: hand;
+}
+
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+  display: block;
+  height: 35px!important;
+}
+
+
+$custom-typography: mat-typography-config(
+    $font-family: 'MyriadPro-Light, MyriadPro-Regular, MyriadPro-It',
+    $headline: mat-typography-level(32px, 48px, 700),
+    $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-expansion-panel.mat-expansion-panel > div.mat-expansion-panel-content > div.mat-expansion-panel-body {
+  padding: 0px!important;
+}
+
+.nav-link-padding {
+  padding-left: 14px;
+}
+
+
+.mat-drawer-container {
+  background-color: white;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/*Define the @font-face Material Icons*/
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('assets/fonts/Material Icons'),
+      local('assets/fonts/MaterialIcons-Regular'),
+      url('assets/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+      url('assets/fonts/MaterialIcons-Regular.woff') format('woff'),
+      url('assets/fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* Rules for sizing the icon.*/
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background*/
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background.*/
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }

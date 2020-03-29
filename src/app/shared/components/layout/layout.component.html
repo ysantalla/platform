@@ -1,0 +1,169 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport="false"
+    attr.role="navigation"
+    mode="over"
+    [opened]="(isHandset$ | async) === false && (isLoggedIn$ | async)"
+  >
+    <mat-toolbar class="navbar-sidebar">
+      <img class="logo-sidenav" src="./assets/img/logos/logo-horizontal.png" />
+    </mat-toolbar>
+
+    <nav class="nav-sidebar">
+      <app-nav-menu [items]="nav"></app-nav-menu>
+
+      <app-nav-menu [items]="university"></app-nav-menu>
+
+      <app-nav-menu [items]="teaching"></app-nav-menu>
+
+      <app-nav-menu [items]="investigation"></app-nav-menu>
+
+      <app-nav-menu [items]="extension"></app-nav-menu>
+
+      <app-nav-menu [items]="services"></app-nav-menu>
+
+      <app-nav-menu
+        [items]="dashboard"
+        *ngIf="isLoggedIn$ | async"
+      ></app-nav-menu>
+
+      <app-nav-menu [items]="about"></app-nav-menu>
+    </nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- this is the sticky menu -->
+    <header
+      class="tabs is-centered is-fullwidth"
+      #stickyMenu
+      [class.sticky]="sticky"
+      fxLayout="row wrap" fxLayoutAlign="center center"
+    >
+      <mat-toolbar fxFlex="1 1 100%" class="fixed" fxLayout="row wrap" fxLayoutAlign="center center" [@FadeInOut]>
+        <mat-toolbar-row fxFlex="1 1 92%">
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            class="toggle"
+            [fxHide]="true"
+            [fxShow.lt-lg]="true"
+            mat-icon-button
+            (click)="drawer.toggle()"
+          >
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+
+
+          <picture style="width: 155px;">
+            <img [fxHide.lt-lg]="true" [@FadeInOut] class="logo" src="./assets/img/logos/logo-horizontal.png" />
+          </picture>
+
+          <nav class="nav-items" *ngIf="!searchFlag" [fxHide.lt-lg]="true">
+            <button mat-button routerLink="/home" routerLinkActive="active">
+              <span class="button-text hand">{{ "home" | transloco }}</span>
+            </button>
+
+            <button
+              mat-button
+              routerLink="/university"
+              routerLinkActive="active"
+            >
+              <span class="button-text">{{ "university" | transloco }}</span>
+            </button>
+
+            <button mat-button [matMenuTriggerFor]="teachingMenu" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">
+              <span class="button-text">{{teaching.heading | transloco}}</span>
+              <mat-menu #teachingMenu="matMenu">
+                  <button *ngFor="let page of teaching.pages" mat-menu-item [routerLink]="page.link" routerLinkActive="active">{{page.heading | transloco}}</button>
+              </mat-menu>
+            </button>
+
+            <button mat-button [matMenuTriggerFor]="investigationMenu" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">
+              <span class="button-text">{{investigation.heading | transloco}}</span>
+              <mat-menu #investigationMenu="matMenu">
+                  <button *ngFor="let page of investigation.pages" mat-menu-item [routerLink]="page.link" routerLinkActive="active">{{page.heading | transloco}}</button>
+              </mat-menu>
+            </button>
+
+            <button
+              mat-button
+              routerLink="/extension"
+              routerLinkActive="active"
+            >
+              <span class="button-text">{{ "extension" | transloco }}</span>
+            </button>
+
+            <button mat-button routerLink="/services" routerLinkActive="active">
+              <span class="button-text">{{ "services" | transloco }}</span>
+            </button>
+          </nav>
+
+          <span class="spacer"></span>
+
+          <app-search *ngIf="searchFlag"></app-search>
+
+          <img (click)="showTextBoxSearch()" width="35" style="cursor: pointer; margin-left: 5px;" src="./assets/img/icons/search.png">
+          <a matTooltip="Facebook" class="icons" href="https://www.facebook.com/UprCuba/">
+            <img width="35" src="./assets/img/icons/facebook.png"/>
+          </a>
+          <a matTooltip="Twitter" class="icons" href="https://twitter.com/upr_cuba">
+            <img width="35" src="./assets/img/icons/twitter.png"/>
+          </a>
+
+          <button mat-button class="icons" (click)="changeLang()">
+            <span class="button-text">{{ language }}</span>
+          </button>
+
+          <div
+          [fxHide]="false"
+          [fxShow.lt-lg]="false">
+
+            <!--<button
+                color="primary"
+                style="text-transform: uppercase; color: white;"
+                mat-raised-button
+                *ngIf="(isLoggedIn$ | async) === false"
+                routerLink="auth/login"
+              >
+                <span>{{ "login" | transloco }}</span>
+            </button>-->
+
+          </div>
+
+        </mat-toolbar-row>
+      </mat-toolbar>
+
+    </header>
+
+    <div class="layout">
+      <div class="router">
+        <div class="item">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+
+      <br />
+
+      <div style="background-color:#4fba72; padding: 1%;" *ngIf="router.url !== '' && router.url !== '/home/index'">
+
+        <app-snap ></app-snap>
+
+      </div>
+
+      <br />
+
+      <footer class="footer">
+        <mat-toolbar style="height: 120px;">
+          <mat-toolbar-row style="padding-top: 20px;">
+            <img width="260" src="./assets/img/logos/logo-footer.png" />
+            <span class="spacer"></span>
+            <span> {{appName}}  &#169; {{ year }} - {{ "footer" | transloco }}</span>
+          </mat-toolbar-row>
+
+        </mat-toolbar>
+      </footer>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

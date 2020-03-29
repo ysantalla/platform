@@ -1,0 +1,91 @@
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <div
+    style="padding-top: 10px;"
+    fxFlex="1 1 90%"
+    fxFlex.lt-md="1 1 90%"
+    [@FadeInOut]
+    fxLayout="row wrap"
+    fxLayoutAlign="start center"
+  >
+    <h1 class="">{{'scientificcouncil' | transloco}}</h1>
+  </div>
+</div>
+
+<mat-divider style="margin: 0 3% 3%;"></mat-divider>
+
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <div
+    fxFlex="1 1 90%"
+    fxFlex.lt-md="1 1 90%"
+    [@FadeInOut]
+    fxLayout="row wrap"
+    fxLayoutAlign="start center"
+  >
+    <h2 class="mat-h2">El Consejo Científico tiene como misión trazar la política científica para la actividad de posgrado y la formación de másteres y doctores. También evalúa la marcha del trabajo científico técnico incluyendo la producción científica, establece los indicadores para medir esta actividad y su interacción con el resto de los procesos y áreas; además, propone los proyectos científicos que recibirán financiamiento por parte de la Universidad u otras instituciones.</h2>
+  </div>
+</div>
+
+<div
+  class="container"
+  fxLayout="row wrap"
+  fxLayoutAlign="center start"
+  fxLayoutAlign.lt-md="center center"
+>
+  <div
+    *ngFor="let data of ccd"
+    class="item"
+    style="margin: 4px;"
+    fxFlex="1 1 30%"
+    fxFlex.lt-md="1 1 100%"
+  >
+
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title><h3>{{data.cargo}}</h3></mat-card-title>
+        <mat-card-subtitle><h4>{{data.nombre}}</h4></mat-card-subtitle>
+      </mat-card-header>
+
+    </mat-card>
+  </div>
+</div>
+
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <div
+    style="padding-top: 10px;"
+    fxFlex="1 1 90%"
+    fxFlex.lt-md="1 1 90%"
+    [@FadeInOut]
+    fxLayout="row wrap"
+    fxLayoutAlign="start center"
+  >
+    <h2 class="mat-h2" style="color: #13632f">Miembros del Consejo Científico</h2>
+  </div>
+</div>
+
+<mat-divider style="margin: 0 3% 3%;"></mat-divider>
+
+<div
+  class="container"
+  fxLayout="row wrap"
+  fxLayoutAlign="center start"
+  fxLayoutAlign.lt-md="center center"
+>
+  <div
+    *ngFor="let data of cc"
+    class="item"
+    style="margin: 4px;"
+    fxFlex="1 1 30%"
+    fxFlex.lt-md="1 1 100%"
+  >
+
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title><h3>{{data.nombre}}</h3></mat-card-title>
+        <mat-card-subtitle><h4>{{data.facultad}}</h4></mat-card-subtitle>
+      </mat-card-header>
+
+    </mat-card>
+  </div>
+</div>

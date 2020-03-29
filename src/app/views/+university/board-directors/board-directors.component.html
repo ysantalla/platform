@@ -1,0 +1,46 @@
+<div
+  class="container"
+  *ngIf="error === false"
+  fxLayout="row wrap"
+  fxLayoutAlign="center start"
+  fxLayoutAlign.lt-md="center center"
+>
+  <div
+    *ngFor="let data of cd"
+    class="item"
+    style="margin: 4px;"
+    fxFlex="1 1 30%"
+    fxFlex.lt-md="1 1 100%"
+  >
+    <!-- <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title><span *ngIf="data.gradoCientifico !== false">{{data.gradoCientifico[0]}}</span> {{data.nombre}} {{data.apellido1}} {{data.apellido2}}</mat-card-title>
+        <mat-card-subtitle>{{data.cargo}}</mat-card-subtitle>
+      </mat-card-header>
+      <img *ngIf="data.foto" width="150" style="border-radius: 5%;" [src]="url+data.username" alt="Photo">
+
+    </mat-card> -->
+
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="header-image"></div>
+        <mat-card-title><h3>{{data.cargo}}</h3></mat-card-title>
+        <mat-card-subtitle><h4>{{data.nombre}}</h4></mat-card-subtitle>
+        <mat-card-subtitle><a>{{data.telefono}}</a></mat-card-subtitle>
+      </mat-card-header>
+
+    </mat-card>
+  </div>
+</div>
+
+<div
+  class="container"
+  *ngIf="error === true"
+  fxLayout="row wrap"
+  fxLayoutAlign="center center"
+>
+  <div style="padding: 10px;" fxFlex="1 1 70%" fxFlex.lt-md="1 1 100%">
+    <h2 class="mat-h2">{{ "error" | transloco }}</h2>
+  </div>
+</div>
