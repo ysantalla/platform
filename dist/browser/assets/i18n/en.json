@@ -37,12 +37,17 @@
   "email": "Email",
   "phone": "Phone",
   "view": "View",
-  "mission": "Misión",
+  "mission": "Mission",
   "events": "Events",
   "enrollment": "Enrollment",
   "undergraduate": "Undergraduate",
   "postgraduate": "Postgraduate",
   "full_career_service": "Full Career Services",
   "postgraduate_service": "Postgraduate Services",
-  "careers": "Careers"
+  "careers": "Careers",
+  "scientificcouncil": "Scientific Council",
+  "linesinvestigation": "Investigation Lines",
+  "investigationgroups": "Investigation Groups",
+  "studycenter": "Study Centers",
+  "publications": "Publications"
 }
