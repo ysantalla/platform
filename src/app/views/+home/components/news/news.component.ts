@@ -76,6 +76,7 @@ export class NewsComponent implements OnInit {
     this.lastNews$ = this.newService.getLastNews().pipe(
       catchError(err => {
         this.error = true;
+
         this.snackBar.open(this.translocoService.translate('error_news'), 'X', {duration: 3000});
         return of([]);
       }),

@@ -19,12 +19,24 @@ export class NewsService {
   getLastNews(): Observable<News[]> {
     return this.httpClient.get<News[]>(`${env.productionAppUrl}/getNews`).pipe(
       map((result: any) => {
+
+        // console.log(result);
+
         const listNews: News[] = [];
         result.data.forEach(news => {
           const title = news.title.rendered;
           const link = news.link;
-          const imageMediumUrl = news._embedded['wp:featuredmedia']['0'].media_details.sizes.full.source_url;
-          const imageThumbnailUrl = news._embedded['wp:featuredmedia']['0'].media_details.sizes.thumbnail.source_url;
+
+
+          let imageMediumUrl = '';
+          let imageThumbnailUrl = '';
+
+          if (news._embedded['wp:featuredmedia'].length > 0) {
+            if (news._embedded['wp:featuredmedia']['0'].media_details) {
+              imageMediumUrl = news._embedded['wp:featuredmedia']['0'].media_details.sizes.full.source_url;
+              imageThumbnailUrl = news._embedded['wp:featuredmedia']['0'].media_details.sizes.thumbnail.source_url;
+            }
+          }
 
           listNews.push(
             {
@@ -52,8 +64,16 @@ export class NewsService {
           let content = news.excerpt.rendered.replace(/(<[^>]+>|<[^>]>|<\/[^>]>)/g, '');
           content = content.replace('[&hellip;]', '...');
           const link = news.link;
-          const imageMediumUrl = news._embedded['wp:featuredmedia']['0'].media_details.sizes.full.source_url;
-          const imageThumbnailUrl = news._embedded['wp:featuredmedia']['0'].media_details.sizes.thumbnail.source_url;
+
+          let imageMediumUrl = '';
+          let imageThumbnailUrl = '';
+
+          if (news._embedded['wp:featuredmedia'].length > 0) {
+            if (news._embedded['wp:featuredmedia']['0'].media_details) {
+              imageMediumUrl = news._embedded['wp:featuredmedia']['0'].media_details.sizes.full.source_url;
+              imageThumbnailUrl = news._embedded['wp:featuredmedia']['0'].media_details.sizes.thumbnail.source_url;
+            }
+          }
 
           if (cont === 3) {
             listNews.push(flag);
@@ -92,8 +112,16 @@ export class NewsService {
           let content = news.excerpt.rendered.replace(/(<[^>]+>|<[^>]>|<\/[^>]>)/g, '');
           content = content.replace('[&hellip;]', '...');
           const link = news.link;
-          const imageMediumUrl = news._embedded['wp:featuredmedia']['0'].media_details.sizes.full.source_url;
-          const imageThumbnailUrl = news._embedded['wp:featuredmedia']['0'].media_details.sizes.thumbnail.source_url;
+
+          let imageMediumUrl = '';
+          let imageThumbnailUrl = '';
+
+          if (news._embedded['wp:featuredmedia'].length > 0) {
+            if (news._embedded['wp:featuredmedia']['0'].media_details) {
+              imageMediumUrl = news._embedded['wp:featuredmedia']['0'].media_details.sizes.full.source_url;
+              imageThumbnailUrl = news._embedded['wp:featuredmedia']['0'].media_details.sizes.thumbnail.source_url;
+            }
+          }
 
           listNews.push(
             {

@@ -4,7 +4,7 @@
 
 export const environment = {
   baseUrl: 'http://localhost:4200',
-  productionAppUrl: 'http://localhost:4000/api',
+  productionAppUrl: 'http://www.upr.edu.cu/api',
   newsUrl: 'http://news.upr.edu.cu/wp-json/wp/v2',
   projectURL: 'http://gespro.upr.edu.cu:5000/graphql',
   syncURL: 'http://sync.upr.edu.cu/api',

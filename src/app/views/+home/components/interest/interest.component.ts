@@ -47,7 +47,7 @@ import { NewsService } from '@app/core/services/news.service';
                  [src]="n.imageThumbnailUrl" alt="Image">
                 <mat-card-header>
 
-                  <mat-card-title><a style="color: #13632F; text-decoration: none;"  [href]="n.link">
+                  <mat-card-title><a style="color: #13632F; text-decoration: none;" target="_blank" [href]="n.link">
                   <h4>{{n.title}}</h4></a>
                 </mat-card-title>
                 </mat-card-header>
