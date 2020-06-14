@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   template: `
      <div [ngClass]="class" class="container mat-elevation-z8" fxLayout="row wrap" fxLayoutAlign="start start">
       <div fxFlex="1 1 100%" fxLayoutAlign="start center">
-        <ul style="list-style: none; padding-left: 5px;">
+        <ul style="list-style: none; padding-left: 5px; height: 14px; margin-top: 8px;">
           <li></li>
           <li></li>
           <li></li>
@@ -13,7 +13,8 @@ import { Component, OnInit, Input } from '@angular/core';
       </div>
 
       <div class="picture" [ngStyle]="{'background-image': 'url('+imageUrl+')'}"
-        fxFlex="1 1 100%" fxLayoutAlign="center center"></div>
+        fxFlex="1 1 100%" fxLayoutAlign="center center">
+      </div>
     </div>
   `,
   styles: [`
@@ -40,7 +41,7 @@ import { Component, OnInit, Input } from '@angular/core';
     }
 
     .picture {
-      min-height: 240px;
+      min-height: 360px;
       height: auto;
       padding: 35px;
       background-position: center center;

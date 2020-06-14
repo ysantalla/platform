@@ -42,7 +42,7 @@
       fxLayout="row wrap" fxLayoutAlign="center center"
     >
       <mat-toolbar fxFlex="1 1 100%" class="fixed" fxLayout="row wrap" fxLayoutAlign="center center" [@FadeInOut]>
-        <mat-toolbar-row fxFlex="1 1 92%">
+        <mat-toolbar-row fxFlex="1 1 85%">
           <button
             type="button"
             aria-label="Toggle sidenav"
@@ -155,8 +155,9 @@
       <br />
 
       <footer class="footer">
-        <mat-toolbar style="height: 120px;">
-          <mat-toolbar-row style="padding-top: 20px;">
+
+        <mat-toolbar style="height: 150px;" fxFlex="1 1 100%" fxLayout="row wrap" fxLayoutAlign="center center">
+          <mat-toolbar-row style="padding-top: 20px;" fxFlex="1 1 85%">
             <img width="260" src="./assets/img/logos/logo-footer.png" />
             <span class="spacer"></span>
             <span> {{appName}}  &#169; {{ year }} - {{ "footer" | transloco }}</span>

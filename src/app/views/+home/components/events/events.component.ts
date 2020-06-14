@@ -14,7 +14,7 @@ import { NewsService } from '@app/core/services/news.service';
 
     <div class="container-news" fxLayout="row wrap" fxLayoutAlign="center center" [@FadeInOut]>
       <div class="item" fxFlex="1 1 100%" fxLayoutAlign="center center">
-          <img width="60" src="./assets/img/icons/events.png" />
+          <img width="65" src="./assets/img/icons/events.png" />
           <h1 style="color: white; padding-top: 15px; display: inline; margin-left: 10px">{{"events" | transloco}}</h1>
       </div>
     </div>
@@ -36,15 +36,17 @@ import { NewsService } from '@app/core/services/news.service';
 
     <nav fxLayout="row wrap" *ngIf="!error"  fxLayoutAlign="center center" [@FadeInOut]>
 
-      <div fxFlex="1 1 100%">
+      <div fxFlex.lt-md="1 1 100%" fxFlex="1 1 87%">
         <owl-carousel-o [options]="customOptions">
           <ng-template carouselSlide *ngFor="let n of lastNews$ | async">
-            <div class="container-numbers" fxLayout="row wrap" fxLayoutAlign="center center">
+            <div fxLayout="row wrap" fxLayoutAlign="center start">
 
               <div class="item" fxFlex="1 1 49%" fxFlex.lt-md="1 1 100%" fxLayout="row wrap"
                 fxLayoutAlign="center start">
                 <div style="padding-bottom: 100px;">
-                  <h2 style="color: white;">{{n.title}}</h2>
+                  <a mat-button [href]="n.link" style="white-space: normal;" target="_blank">
+                    <h2 style="color: white;">{{n.title}}</h2>
+                  </a>
                   <p style="color: white;">{{n.content}}</p>
 
                   <a mat-button [href]="n.link" target="_blank">
@@ -56,7 +58,7 @@ import { NewsService } from '@app/core/services/news.service';
 
               </div>
 
-              <div class="item" style="margin-left: 20px;" fxFlex="1 1 49%" fxFlex.lt-md="1 1 100%">
+              <div class="item" fxFlex="1 1 49%" fxFlex.lt-md="1 1 100%">
                 <app-window [imageUrl]="n.imageMediumUrl"></app-window>
               </div>
             </div>

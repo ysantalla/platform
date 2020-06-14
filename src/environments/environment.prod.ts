@@ -6,5 +6,5 @@ export const environment = {
   syncURL: 'http://sync.upr.edu.cu/api',
   production: true,
   envName: 'Production',
-  appName: 'Platform UPR'
+  appName: 'Universidad de Pinar del Río "Hermanos Saíz Montes de Oca'
 };

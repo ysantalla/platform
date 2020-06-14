@@ -46,7 +46,7 @@
 
   <div class="container" fxLayout="row wrap" style="height: 95vh; background-color: rgba(16, 98, 42, .8);"
     fxLayoutAlign="center center">
-    <div class="cover-transp" fxFlex="1 1 33%" fxFlex.lt-md="1 1 100%" fxLayoutAlign="center  center">
+    <div class="cover-transp" fxFlex="1 1 28%" fxFlex.lt-md="1 1 100%" fxLayoutAlign="center center">
       <picture [@EnterRight]="'flyIn'">
         <img width="100%" src="./assets/img/logos/logo-white.png" src.lt-md="./assets/img/logos/logo-white.png" />
       </picture>
@@ -60,65 +60,69 @@
 <br />
 <br />
 
-<article>
-  <div class="container-numbers" fxLayout="row wrap" fxLayoutAlign="center center" >
+<article style="padding-top: 3%; padding-bottom: 3%;">
+  <div class="container-numbers"  fxLayout="row wrap" fxLayoutAlign="center center">
 
-    <div class="item" style="background-color: #486920" fxFlex="1 1 30%" fxFlex.lt-md="1 1 100%" [@EnterLeft]="'flyIn'" fxLayout="row wrap"
-      fxLayoutAlign="start start" fxLayoutAlign.lt-md="start start">
+    <div class="container-numbers"  fxLayout="row wrap" fxFlex="1 1 86%" fxFlex.lt-md="1 1 100%" fxLayoutAlign="center center">
 
-      <div style="padding: 15px;" fxFlex="1 1 100%">
-        <h1 class="mat-h1" style="color: white; text-transform: uppercase;">{{"students" | transloco}}</h1>
+      <div class="item" style="background-color: #486920" fxFlex="1 1 30%" fxFlex.lt-md="1 1 100%" [@EnterLeft]="'flyIn'" fxLayout="row wrap"
+        fxLayoutAlign="start start" fxLayoutAlign.lt-md="start start">
 
-        <mat-divider style="border-top-color: white;"></mat-divider>
+        <div style="padding: 15px;" fxFlex="1 1 100%">
+          <h1 class="mat-h1" style="color: white; text-transform: uppercase;">{{"students" | transloco}}</h1>
 
-        <br>
+          <mat-divider style="border-top-color: white;"></mat-divider>
 
-        <h1 class="mat-h1" style="color: white;">{{'undergraduate' | transloco}}: {{numbers.undergraduate}}</h1>
-        <h1 class="mat-h1" style="color: white;">{{'postgraduate' | transloco}}: {{numbers.postgraduate}}</h1>
+          <br>
 
-        <br />
+          <h1 class="mat-h1" style="color: white;">{{'undergraduate' | transloco}}: {{numbers.undergraduate}}</h1>
+          <h1 class="mat-h1" style="color: white;">{{'postgraduate' | transloco}}: {{numbers.postgraduate}}</h1>
+
+          <br />
+        </div>
+
       </div>
 
-    </div>
+      <hr>
 
-    <hr>
+      <div class="item" style="background-color: #0063a6" fxFlex="1 1 30%" fxFlex.lt-md="1 1 100%" [@EnterLeft]="'flyIn'" fxLayout="row wrap"
+        fxLayoutAlign="start start" fxLayoutAlign.lt-md="center center">
 
-    <div class="item" style="background-color: #0063a6" fxFlex="1 1 30%" fxFlex.lt-md="1 1 100%" [@EnterLeft]="'flyIn'" fxLayout="row wrap"
-      fxLayoutAlign="start start" fxLayoutAlign.lt-md="center center">
+        <div style="padding: 15px;" fxFlex="1 1 100%">
+          <h1 class="mat-h1" style="color: white; text-transform: uppercase;">{{"profesors" | transloco}}</h1>
 
-      <div style="padding: 15px;" fxFlex="1 1 100%">
-        <h1 class="mat-h1" style="color: white; text-transform: uppercase;">{{"profesors" | transloco}}</h1>
+          <mat-divider style="border-top-color: white;"></mat-divider>
 
-        <mat-divider style="border-top-color: white;"></mat-divider>
+          <br>
 
-        <br>
+          <h1 class="mat-h1" style="color: white;">{{'profesors' | transloco}}: {{numbers.profesors}}</h1>
+          <h1 class="mat-h1" style="color: white;">{{'masters' | transloco}}: {{numbers.masters}}</h1>
+          <h1 class="mat-h1" style="color: white;">{{'doctors' | transloco}}: {{numbers.doctors}}</h1>
 
-        <h1 class="mat-h1" style="color: white;">{{'profesors' | transloco}}: {{numbers.profesors}}</h1>
-        <h1 class="mat-h1" style="color: white;">{{'masters' | transloco}}: {{numbers.masters}}</h1>
-        <h1 class="mat-h1" style="color: white;">{{'doctors' | transloco}}: {{numbers.doctors}}</h1>
+          <br />
+        </div>
 
-        <br />
       </div>
 
-    </div>
+      <hr>
 
-    <hr>
+      <div class="item" style="background-color: #5a2234" fxFlex="1 1 30%" fxFlex.lt-md="1 1 100%" [@EnterLeft]="'flyIn'" fxLayout="row wrap"
+        fxLayoutAlign="start start" fxLayoutAlign.lt-md="center center">
 
-    <div class="item" style="background-color: #5a2234" fxFlex="1 1 30%" fxFlex.lt-md="1 1 100%" [@EnterLeft]="'flyIn'" fxLayout="row wrap"
-      fxLayoutAlign="start start" fxLayoutAlign.lt-md="center center">
+        <div style="padding: 15px;" fxFlex="1 1 100%">
+          <h1 class="mat-h1" style="color: white; text-transform: uppercase;">{{"investigation" | transloco}}</h1>
 
-      <div style="padding: 15px;" fxFlex="1 1 100%">
-        <h1 class="mat-h1" style="color: white; text-transform: uppercase;">{{"investigation" | transloco}}</h1>
+          <mat-divider style="border-top-color: white;"></mat-divider>
 
-        <mat-divider style="border-top-color: white;"></mat-divider>
+          <br>
 
-        <br>
+          <h1 class="mat-h1" style="color: white;">{{'magazine' | transloco}}: {{numbers.magazine}}</h1>
+          <h1 class="mat-h1" style="color: white;">{{'study_center' | transloco}}: {{numbers.study_center}}</h1>
+          <h1 class="mat-h1" style="color: white;">{{'projects' | transloco}}: {{numbers.projects}}</h1>
 
-        <h1 class="mat-h1" style="color: white;">{{'magazine' | transloco}}: {{numbers.magazine}}</h1>
-        <h1 class="mat-h1" style="color: white;">{{'study_center' | transloco}}: {{numbers.study_center}}</h1>
-        <h1 class="mat-h1" style="color: white;">{{'projects' | transloco}}: {{numbers.projects}}</h1>
+          <br />
+        </div>
 
-        <br />
       </div>
 
     </div>
@@ -127,25 +131,27 @@
 </article>
 
 <br />
-<article [ngClass]="otherColor">
+<article [ngClass]="otherColor" style="padding-top: 2%; padding-bottom: 3%;">
   <app-events></app-events>
 </article>
 
 <br />
 
-<app-news [ngClass]="color"></app-news>
+<app-news [ngClass]="color" style="padding-top: 3%; padding-bottom: 3%;"></app-news>
 
 <br />
 
-<article [ngClass]="otherColor">
+<article [ngClass]="otherColor" style="padding-top: 2%; padding-bottom: 3%;">
   <app-interest></app-interest>
-
 </article>
 
 <br />
 
-<article [ngClass]="color">
-  <div class="container-links" fxLayout="row wrap" fxLayoutAlign="start start" [@FadeInOut]>
+<article [ngClass]="color" style="padding-top: 3%; padding-bottom: 3%;">
+  <div class="container-links" fxLayout="row wrap" fxLayoutAlign="center center" [@FadeInOut]>
+
+    <div fxLayout="row wrap" fxFlex="1 1 86%" fxFlex.lt-md="1 1 100%" fxLayoutAlign="start start">
+
     <div class="item-links" fxFlex="1 1 50%" fxFlex.lt-md="1 1 100%">
       <h2 class="mat-h2">{{'contact' | transloco}}</h2>
       <mat-list role="list">
@@ -179,10 +185,14 @@
             href="https://www.ecured.cu/EcuRed:Enciclopedia_cubana">Ecured</a></mat-list-item>
         <mat-list-item role="listitem"><a class="link" href="http://www.cubadebate.cu/">Cubadebate</a></mat-list-item>
         <mat-list-item role="listitem"><a class="link"
-            href="http://www.unavarra.es/relacionesinternacionales/erasmus-paises-asociados">Programa Erasmo</a>
+            href="http://www.unavarra.es/relacionesinternacionales/erasmus-paises-asociados">Programa Erasmus</a>
         </mat-list-item>
       </mat-list>
 
     </div>
+
   </div>
+
+  </div>
+
 </article>

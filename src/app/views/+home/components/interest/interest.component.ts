@@ -14,7 +14,7 @@ import { NewsService } from '@app/core/services/news.service';
 
     <div class="container-news" fxLayout="row wrap" fxLayoutAlign="center center" [@FadeInOut]>
       <div class="item" fxFlex="1 1 100%" fxLayoutAlign="center center">
-          <img width="60" src="./assets/img/icons/interest.png" />
+          <img width="66" src="./assets/img/icons/interest.png" />
           <h1 style="color: white; padding-top: 15px; display: inline; margin-left: 10px">{{"interest" | transloco}}</h1>
       </div>
     </div>
@@ -29,7 +29,7 @@ import { NewsService } from '@app/core/services/news.service';
 
     <div class="error-message" *ngIf="error" fxLayout="row wrap" fxLayout.lt-md="column wrap"
       fxLayoutAlign="center center" fxLayoutAlign.lt-md="center center" [@FadeInOut]>
-      <div class="new-item" fxFlex="1 1 90%">
+      <div class="new-item" fxFlex="1 1 100%">
         <h3>{{"error_news" | transloco}}</h3>
       </div>
     </div>
@@ -41,19 +41,23 @@ import { NewsService } from '@app/core/services/news.service';
 
           <ng-template carouselSlide *ngFor="let item of lastNews$ | async; let i = index; let c = count;">
 
-            <div  fxFlex="1 1 33%" style="padding: 25px" *ngFor="let n  of item">
+            <div fxFlex="1 2 33%" *ngFor="let n  of item" style="padding: 4%">
               <mat-card class="card">
-                <img mat-card-image style="border-radius: 50%; width: 80%; margin-left: 8%; margin-top: 3%"
-                 [src]="n.imageThumbnailUrl" alt="Image">
+                <div fxLayout="row wrap" fxLayoutAlign="center center">
+                  <img mat-card-image fxFlex="1 1 60%" style="border-radius: 50%; margin-top: 3%"
+                  [src]="n.imageThumbnailUrl" alt="Image">
+                </div>
                 <mat-card-header>
 
-                  <mat-card-title><a style="color: #13632F; text-decoration: none;" target="_blank" [href]="n.link">
-                  <h4>{{n.title}}</h4></a>
-                </mat-card-title>
+                  <mat-card-title>
+                    <a style="color: #13632F; text-decoration: none;" target="_blank" [href]="n.link">
+                      <h3>{{n.title}}</h3>
+                    </a>
+                  </mat-card-title>
                 </mat-card-header>
 
                 <mat-card-content>
-                  <p>
+                  <p style="text-align: justify;">
                     {{n.content}}
                   </p>
                 </mat-card-content>

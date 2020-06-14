@@ -10,7 +10,7 @@ export const environment = {
   syncURL: 'http://sync.upr.edu.cu/api',
   production: false,
   envName: 'Development',
-  appName: 'Platform UPR'
+  appName: 'Universidad de Pinar del Río "Hermanos Saíz Montes de Oca'
 };
 
 /*
