@@ -41,7 +41,9 @@ import { NewsService } from '@app/core/services/news.service';
             <div *ngFor="let n of lastNews$ | async" class="item" fxFlex="1 1 45%" style="margin: 2%"
               fxFlex.lt-md="1 1 100%" fxLayoutAlign="start start">
               <div class="new-item" fxFlex="1 1 100%">
-                <app-window class="green window" [imageUrl]="n.imageMediumUrl"></app-window>
+                <a style="text-decoration: none;" [href]="n.link" target="_blank">
+                  <app-window class="green window" [imageUrl]="n.imageMediumUrl"></app-window>
+                </a>
                 <a style="text-decoration: none;" [href]="n.link" target="_blank">
                   <h3 style="margin-left: 10px; margin-top: 20px">{{n.title}}</h3>
                 </a>

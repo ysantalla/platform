@@ -12,7 +12,12 @@ const routes: Routes = [
     path: '',
     component: IndexComponent,
     data: {title: 'university'}
-  }
+  },
+  {
+    path: 'board-directors',
+    component: BoardDirectorsComponent,
+    data: {title: 'Board of directors'}
+  },
 ];
 
 @NgModule({

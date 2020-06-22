@@ -12,7 +12,7 @@ import { NewsService } from '@app/core/services/news.service';
   selector: 'app-events',
   template: `
 
-    <div class="container-news" fxLayout="row wrap" fxLayoutAlign="center center" [@FadeInOut]>
+    <div class="container-events" fxLayout="row wrap" fxLayoutAlign="center center" [@FadeInOut]>
       <div class="item" fxFlex="1 1 100%" fxLayoutAlign="center center">
           <img width="65" src="./assets/img/icons/events.png" />
           <h1 style="color: white; padding-top: 15px; display: inline; margin-left: 10px">{{"events" | transloco}}</h1>
@@ -58,7 +58,7 @@ import { NewsService } from '@app/core/services/news.service';
 
               </div>
 
-              <div class="item" fxFlex="1 1 49%" fxFlex.lt-md="1 1 100%">
+              <div class="item" style="margin-left: 10px;" fxFlex="1 1 49%" fxFlex.lt-md="1 1 100%">
                 <app-window [imageUrl]="n.imageMediumUrl"></app-window>
               </div>
             </div>
@@ -69,7 +69,7 @@ import { NewsService } from '@app/core/services/news.service';
     </nav>
   `,
   styles: [`
-    .container-news {
+    .container-events {
       padding: 0px 30px 30px 30px;
     }
   `],

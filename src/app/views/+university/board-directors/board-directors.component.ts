@@ -4,6 +4,7 @@ import { Observable, of } from 'rxjs';
 import { finalize, catchError } from 'rxjs/operators';
 
 import {environment as env} from '@env/environment';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 interface CD {
   nombre: string;
@@ -14,7 +15,18 @@ interface CD {
 @Component({
   selector: 'app-board-directors',
   templateUrl: './board-directors.component.html',
-  styleUrls: ['./board-directors.component.scss']
+  styleUrls: ['./board-directors.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      state(
+        'void',
+        style({
+          opacity: 0
+        })
+      ),
+      transition('void <=> *', animate(1000))
+    ])
+  ]
 })
 export class BoardDirectorsComponent implements OnInit {
 
@@ -33,84 +45,89 @@ export class BoardDirectorsComponent implements OnInit {
 
     this.cd = [
       {
-        nombre: "Dr.C. Yorki Mayor Hernández",
-        cargo: "Rector",
-        telefono: "(53) 48 779348/ (53) 48 777923"
+        nombre: 'Dr.C. Yorki Mayor Hernández',
+        cargo: 'Rector',
+        telefono: '(53) 48 779348/ (53) 48 777923'
       },
       {
-        nombre: "Dr.C. Mario Luis Gómez Ivizate",
-        cargo: "Vicerrector Primero",
-        telefono: "(53) 48 728623"
+        nombre: 'Dr.C. Mario Luis Gómez Ivizate',
+        cargo: 'Vicerrector Primero',
+        telefono: '(53) 48 728623'
       },
       {
-        nombre: "Dra.C. Saray Nuñez González",
-        cargo: "Vicerrectora",
-        telefono: "(53) 48 728622"
+        nombre: 'Dr.C. Saray Nuñez González',
+        cargo: 'Vicerrector de Investigación, Informatización y Postgrado',
+        telefono: '(53) 48 728622'
       },
       {
-        nombre: "Dra.C. María Cristina Salabarría Márquez",
-        cargo: "Vicerrectora",
-        telefono: "(53) 48 779349"
+        nombre: 'Dr.C. María Cristina Salabarría Márquez',
+        cargo: 'Vicerrector',
+        telefono: '(53) 48 779349'
       },
       {
-        nombre: "MSc. Reinier González Garrido",
-        cargo: "Director general",
-        telefono: "(53) 48728624/ (53) 48 753009"
+        nombre: 'MSc. Reinier González Garrido',
+        cargo: 'Director general',
+        telefono: '(53) 48728624/ (53) 48 753009'
       },
       {
-        nombre: "MSc. Yosvany Barrios Hernández",
-        cargo: "Director general",
-        telefono: "(53) 48 759728"
+        nombre: 'MSc. Yosvany Barrios Hernández',
+        cargo: 'Director general',
+        telefono: '(53) 48 759728'
       },
       {
-        nombre: "Dr.C. Luís Wilfredo Martínez Becerra",
-        cargo: "Decano Facultad de Ciencias Forestales y Agropecuarias",
-        telefono: "(53) 48 775452"
+        nombre: 'Dr.C. Luís Wilfredo Martínez Becerra',
+        cargo: 'Decano Facultad de Ciencias Forestales y Agropecuarias',
+        telefono: '(53) 48 775452'
       },
       {
-        nombre: "Dra.C. Dianelkys Martínez Rodríguez",
-        cargo: "Decano Facultad de Ciencias Técnicas",
-        telefono: "(53) 48 779358"
+        nombre: 'Dr.C. Dianelkys Martínez Rodríguez',
+        cargo: 'Decano Facultad de Ciencias Sociales y Humanísticas',
+        telefono: '(53) 48 779358'
       },
       {
-        nombre: "Dr.C. Jose Almeida Cordero Mederos",
-        cargo: "Decano Facultad de Ciencias Económicas y Empresariales",
-        telefono: "(53) 48 754289"
+        nombre: 'Dr.C. Roberto Barrera',
+        cargo: 'Decano Facultad de Ciencias Técnicas',
+        telefono: '(53) 48 779358'
       },
       {
-        nombre: "DrC. Julio Antonio Conill Armenteros",
-        cargo: "Decano Facultad de Educación Infantil",
-        telefono: "(53) 48 785102"
+        nombre: 'Dr.C. Jose Almeida Cordero Mederos',
+        cargo: 'Decano Facultad de Ciencias Económicas y Empresariales',
+        telefono: '(53) 48 754289'
       },
       {
-        nombre: "Dr.C. Roberto Isbel Morejón Quintana",
-        cargo: "Decano Facultad de Educación Media",
-        telefono: "(53) 48 767310"
+        nombre: 'DrC. Julio Antonio Conill Armenteros',
+        cargo: 'Decano Facultad de Educación Infantil',
+        telefono: '(53) 48 785102'
       },
       {
-        nombre: "MSc. Yadira Pérez Díaz",
-        cargo: "Decana Facultad de Cultura Física",
-        telefono: "(53) 48 728254"
+        nombre: 'Dr.C. Roberto Isbel Morejón Quintana',
+        cargo: 'Decano Facultad de Educación Media',
+        telefono: '(53) 48 767310'
       },
       {
-        nombre: "MSc. Magalys González Hernández",
-        cargo: "Secretaria General",
-        telefono: "(53) 48 779354"
+        nombre: 'MSc. Yadira Pérez Díaz',
+        cargo: 'Decana Facultad de Cultura Física',
+        telefono: '(53) 48 728254'
       },
       {
-        nombre: "Lic. José Enrique Jiménez Barrera",
-        cargo: "Director de Cuadros",
-        telefono: "(53) 48 779365"
+        nombre: 'MSc. Magalys González Hernández',
+        cargo: 'Secretaria General',
+        telefono: '(53) 48 779354'
       },
       {
-        nombre: "Lic. Jerónimo Leopoldo González Porras",
-        cargo: "Director de Contabilidad y Finanzas",
-        telefono: "(53) 48 753257"
+        nombre: 'Lic. José Enrique Jiménez Barrera',
+        cargo: 'Director de Cuadros',
+        telefono: '(53) 48 779365'
       },
       {
-        nombre: "Lic. Ana Teresa Zubizarreta Santos",
-        cargo: "Asesora del Rector",
-        telefono: "(53) 48 779348/ (53) 48 777923"
+        nombre: 'Lic. Jerónimo Leopoldo González Porras',
+        cargo: 'Director de Contabilidad y Finanzas',
+        telefono: '(53) 48 753257'
+      },
+      {
+        nombre: 'Lic. Ana Teresa Zubizarreta Santos',
+        cargo: 'Asesora del Rector',
+        telefono: '(53) 48 779348/ (53) 48 777923'
       },
     ];
 

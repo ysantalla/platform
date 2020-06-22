@@ -65,12 +65,11 @@
               <span class="button-text hand">{{ "home" | transloco }}</span>
             </button>
 
-            <button
-              mat-button
-              routerLink="/university"
-              routerLinkActive="active"
-            >
-              <span class="button-text">{{ "university" | transloco }}</span>
+            <button mat-button [matMenuTriggerFor]="universityMenu" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">
+              <span class="button-text">{{teaching.heading | transloco}}</span>
+              <mat-menu #universityMenu="matMenu">
+                  <button *ngFor="let page of university.pages" mat-menu-item [routerLink]="page.link" routerLinkActive="active">{{page.heading | transloco}}</button>
+              </mat-menu>
             </button>
 
             <button mat-button [matMenuTriggerFor]="teachingMenu" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">
@@ -144,15 +143,11 @@
         </div>
       </div>
 
-      <br />
-
       <div style="background-color:#4fba72; padding: 1%;" *ngIf="router.url !== '' && router.url !== '/home/index'">
 
         <app-snap ></app-snap>
 
       </div>
-
-      <br />
 
       <footer class="footer">
 
@@ -160,7 +155,7 @@
           <mat-toolbar-row style="padding-top: 20px;" fxFlex="1 1 85%">
             <img width="260" src="./assets/img/logos/logo-footer.png" />
             <span class="spacer"></span>
-            <span> {{appName}}  &#169; {{ year }} - {{ "footer" | transloco }}</span>
+            <span> &#169; {{ year }} - {{ "footer" | transloco }}</span>
           </mat-toolbar-row>
 
         </mat-toolbar>

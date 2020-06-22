@@ -82,7 +82,16 @@ export class LayoutComponent implements OnInit {
       heading: 'university',
       icon: '',
       link: '/university',
-      pages: []
+      pages: [
+        {
+          heading: 'whoWeAre',
+          link: '/university'
+        },
+        {
+          heading: 'boardOfDirectors',
+          link: '/university/board-directors'
+        }
+      ]
     };
 
     this.extension = {

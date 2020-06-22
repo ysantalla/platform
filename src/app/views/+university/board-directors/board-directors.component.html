@@ -1,46 +1,57 @@
-<div
-  class="container"
-  *ngIf="error === false"
-  fxLayout="row wrap"
-  fxLayoutAlign="center start"
-  fxLayoutAlign.lt-md="center center"
->
-  <div
-    *ngFor="let data of cd"
-    class="item"
-    style="margin: 4px;"
-    fxFlex="1 1 30%"
-    fxFlex.lt-md="1 1 100%"
-  >
-    <!-- <mat-card class="card">
-      <mat-card-header>
-        <div mat-card-avatar class="header-image"></div>
-        <mat-card-title><span *ngIf="data.gradoCientifico !== false">{{data.gradoCientifico[0]}}</span> {{data.nombre}} {{data.apellido1}} {{data.apellido2}}</mat-card-title>
-        <mat-card-subtitle>{{data.cargo}}</mat-card-subtitle>
-      </mat-card-header>
-      <img *ngIf="data.foto" width="150" style="border-radius: 5%;" [src]="url+data.username" alt="Photo">
+<div fxLayout="row wrap" fxLayoutAlign="center center">
+  <div fxLayout="row wrap" fxFlex="1 1 85%" fxFlex.lt-md="1 1 100%" fxLayoutAlign="center center">
+    <div style="padding-top: 10px;" fxFlex="1 1 100%" fxFlex.lt-md="1 1 100%" fxLayout="row wrap"
+      fxLayoutAlign="center center" [@fadeInOut]>
+      <h1>{{ 'boardOfDirectors' | transloco }}</h1>
 
-    </mat-card> -->
+    </div>
 
-    <mat-card class="card">
-      <mat-card-header>
-        <div mat-card-avatar class="header-image"></div>
-        <mat-card-title><h3>{{data.cargo}}</h3></mat-card-title>
-        <mat-card-subtitle><h4>{{data.nombre}}</h4></mat-card-subtitle>
-        <mat-card-subtitle><a>{{data.telefono}}</a></mat-card-subtitle>
-      </mat-card-header>
+    <mat-divider fxFlex="1 1 100%"></mat-divider>
 
-    </mat-card>
+    <article>
+      <div class="container" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="1 1 100%" [@fadeInOut]>
+
+
+        <div *ngFor="let data of cd" class="item" fxLayout="row wrap" fxLayoutAlign="center center" style="margin: 1%; padding: 1%;" fxFlex="1 1 48%" fxFlex.lt-md="1 1 100%">
+          <!-- <mat-card class="card">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title><span *ngIf="data.gradoCientifico !== false">{{data.gradoCientifico[0]}}</span> {{data.nombre}} {{data.apellido1}} {{data.apellido2}}</mat-card-title>
+          <mat-card-subtitle>{{data.cargo}}</mat-card-subtitle>
+        </mat-card-header>
+        <img *ngIf="data.foto" width="150" style="border-radius: 5%;" [src]="url+data.username" alt="Photo">
+
+      </mat-card> -->
+
+          <div fxFlex="1 1 30%">
+
+            <img width="80%" src="./assets/img/default-user.png">
+
+          </div>
+
+          <div fxFlex="1 1 70%">
+            <h3>{{data.cargo}}</h3>
+            <h4>{{data.nombre}}</h4>
+            <a>{{data.telefono}}</a>
+          </div>
+
+          <!-- <mat-card class="card">
+            <mat-card-header>
+              <div mat-card-avatar class="header-image"></div>
+              <mat-card-title>
+
+              </mat-card-title>
+              <mat-card-subtitle>
+
+              </mat-card-subtitle>
+              <mat-card-subtitle></mat-card-subtitle>
+            </mat-card-header>
+
+          </mat-card> -->
+        </div>
+      </div>
+
+    </article>
   </div>
-</div>
 
-<div
-  class="container"
-  *ngIf="error === true"
-  fxLayout="row wrap"
-  fxLayoutAlign="center center"
->
-  <div style="padding: 10px;" fxFlex="1 1 70%" fxFlex.lt-md="1 1 100%">
-    <h2 class="mat-h2">{{ "error" | transloco }}</h2>
-  </div>
 </div>
