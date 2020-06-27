@@ -1,31 +1,32 @@
 <div fxLayout="row wrap" fxLayoutAlign="center center">
-  <div
-    style="padding-top: 10px;"
-    fxFlex="1 1 90%"
-    fxFlex.lt-md="1 1 90%"
-    [@FadeInOut]
-    fxLayout="row wrap"
-    fxLayoutAlign="start center"
-  >
-    <h1 class="">{{'extension' | transloco}}</h1>
-  </div>
-</div>
+  <div fxLayout="row wrap" fxFlex="1 1 85%" fxFlex.lt-md="1 1 100%" fxLayoutAlign="center center">
+    <div style="padding-top: 10px;" fxFlex="1 1 100%" fxFlex.lt-md="1 1 100%" fxLayout="row wrap"
+      fxLayoutAlign="center center" [@FadeInOut]>
+      <h1>{{ 'extension' | transloco }}</h1>
 
-<mat-divider style="margin: 0 3% 3%;"></mat-divider>
-
-<article>
-  <div class="container" fxLayout="row wrap" fxLayoutAlign="center start">
-
-    <div class="item mat-elevation-z8" fxFlex="1 1 45%" *ngFor="let d of data" fxFlex.lt-md="1 1 90%" [@FadeInOut] fxLayout="row wrap" fxLayoutAlign="start start" >
-        <h1 class="mat-h1" style="color: white">{{d.type}}</h1>
-        <ul style="list-style: none;">
-          <li *ngFor="let item of d.list">
-            <p style="color: white;">
-              {{ item }}
-            </p>
-            </li>
-        </ul>
     </div>
 
+    <mat-divider fxFlex="1 1 100%"></mat-divider>
+
+    <article>
+      <div class="container" fxLayout="row wrap" fxLayoutAlign="center center" fxFlex="1 1 100%" [@FadeInOut]>
+        <div *ngFor="let d of data" class="item" fxLayout="row wrap" fxLayoutAlign="center center" style="margin: 1%; padding: 1%;" fxFlex="1 1 48%" fxFlex.lt-md="1 1 100%">
+
+          <div fxFlex="1 1 100%" class="item mat-elevation-z">
+            <h1 class="mat-h1">{{d.type}}</h1>
+            <ul style="list-style: none;">
+              <li *ngFor="let item of d.list">
+                <p>
+                  {{ item }}
+                </p>
+                </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
   </div>
-</article>
+
+</div>

@@ -16,7 +16,7 @@ const routes: Routes = [
   {
     path: 'board-directors',
     component: BoardDirectorsComponent,
-    data: {title: 'Board of directors'}
+    data: {title: 'boardOfDirectors'}
   },
 ];
 

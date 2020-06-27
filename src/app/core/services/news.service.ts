@@ -79,21 +79,21 @@ export class NewsService {
             listNews.push(flag);
             cont = 0;
             flag = [];
-          } else {
-            flag.push(
-              {
-                title,
-                link,
-                content,
-                imageMediumUrl,
-                imageThumbnailUrl,
-              }
-            );
-            cont ++;
           }
+
+          flag.push(
+            {
+              title,
+              link,
+              content,
+              imageMediumUrl,
+              imageThumbnailUrl,
+            }
+          );
+          cont ++;
         });
 
-        if (cont > 0) {
+        if (cont >= 0) {
           listNews.push(flag);
         }
 

@@ -32,10 +32,6 @@ export class IndexComponent implements OnInit {
             link: 'https://correo.upr.edu.cu'
           },
           {
-            name: 'Correo Estudiantes',
-            link: 'https://estudiantes.upr.edu.cu'
-          },
-          {
             name: 'Proxy Go',
             link: 'https://proxy-go.upr.edu.cu'
           },

@@ -1,47 +1,35 @@
 <div fxLayout="row wrap" fxLayoutAlign="center center">
-  <div
-    style="padding-top: 10px;"
-    fxFlex="1 1 90%"
-    fxFlex.lt-md="1 1 90%"
-    [@FadeInOut]
-    fxLayout="row wrap"
-    fxLayoutAlign="start center"
-  >
-    <h1 class="">{{'services' | transloco}}</h1>
+  <div fxLayout="row wrap" fxFlex="1 1 85%" fxFlex.lt-md="1 1 100%" fxLayoutAlign="center center">
+    <div style="padding-top: 10px;" fxFlex="1 1 100%" fxFlex.lt-md="1 1 100%" fxLayout="row wrap"
+      fxLayoutAlign="center center" [@FadeInOut]>
+      <h1>{{ 'extension' | transloco }}</h1>
+
+    </div>
+
+    <mat-divider fxFlex="1 1 100%"></mat-divider>
+
+    <article>
+      <div class="container" fxLayout="row wrap" fxLayoutAlign="start start" fxFlex="1 1 100%" [@FadeInOut]>
+        <div *ngFor="let d of data" class="item" fxLayout="row wrap" fxLayoutAlign="start start" style="margin: 1%; padding: 1%;" fxFlex="1 1 48%" fxFlex.lt-md="1 1 100%">
+
+          <div fxFlex="1 1 100%" class="item mat-elevation-z">
+            <h1 class="mat-h1">{{d.type}}</h1>
+            <ul style="list-style: none;">
+              <li *ngFor="let item of d.list">
+                <a class="service-item" [href]="item.link" target="_blank" style="text-decoration: none;">
+                  <h3 class="mat-h3">
+                    {{ item.name }}
+                  </h3>
+                </a>
+                </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
   </div>
+
 </div>
 
-<mat-divider style="margin: 0 3% 3%;"></mat-divider>
-
-<div
-  class="container"
-  fxLayout="row wrap"
-  fxLayoutAlign="center start"
-  fxLayoutAlign.lt-md="center center"
->
-  <div
-    *ngFor="let d of data"
-    class="item"
-    style="margin: 20px;"
-    fxFlex="1 1 45%"
-    fxFlex.lt-md="1 1 100%"
-  >
-
-    <mat-card class="card" [@FadeInOut]>
-      <mat-card-header>
-        <mat-card-title><h2 class="mat-h2">{{d.type}}</h2></mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <ul style="list-style: none;">
-          <li *ngFor="let item of d.list">
-            <a class="service-item" [href]="item.link" target="_blank" style="text-decoration: none;">
-              <h3 class="mat-h3">
-                {{ item.name }}
-              </h3>
-            </a>
-            </li>
-        </ul>
-      </mat-card-content>
-    </mat-card>
-  </div>
-</div>

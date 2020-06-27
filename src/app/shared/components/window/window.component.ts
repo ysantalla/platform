@@ -45,6 +45,8 @@ import { Component, OnInit, Input } from '@angular/core';
       height: auto;
       padding: 35px;
       background-position: center center;
+      /* background-repeat: no-repeat;
+      background-size: ; */
     }
 
 

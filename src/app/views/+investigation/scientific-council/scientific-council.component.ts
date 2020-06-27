@@ -5,6 +5,8 @@ interface CC {
   nombre: string;
   facultad?: string;
   cargo?: string;
+  correo?: string;
+  telefono?: string;
 }
 
 @Component({
@@ -16,7 +18,6 @@ interface CC {
 export class ScientificCouncilComponent implements OnInit {
 
   ccd: CC[] = [];
-
   cc: CC[] = [];
 
   constructor() { }
@@ -25,15 +26,15 @@ export class ScientificCouncilComponent implements OnInit {
 
     this.ccd = [
       {
-        nombre: 'Dra C. Maricela González',
+        nombre: 'Dr.C. Maricela González',
         cargo: 'Presidente'
       },
       {
-        nombre: 'Dra C. Tania Yakelin',
+        nombre: 'Dr.C. Tania Yakelin',
         cargo: 'Vicepresidente'
       },
       {
-        nombre: 'Dr C. Alie Perez',
+        nombre: 'Dr.C. Alie Perez',
         cargo: 'Vicepresidente'
       }
 
@@ -41,31 +42,31 @@ export class ScientificCouncilComponent implements OnInit {
 
     this.cc = [
       {
-        nombre: 'Dra. C. Tania Vargas Fernández',
+        nombre: 'Dr.C. Tania Vargas Fernández',
         facultad: 'Facultad de Ciencias Económicas y Empresariales'
       },
       {
-        nombre: 'Dr. C. Carlos Cesar Torres Páez',
+        nombre: 'Dr.C. Carlos Cesar Torres Páez',
         facultad: 'Facultad de Ciencias Económicas y Empresariales'
       },
       {
-        nombre: 'Dra C. Soleidy Rivero Amador',
+        nombre: 'Dr.C. Soleidy Rivero Amador',
         facultad: 'Facultad de Ciencias Económicas y Empresariales'
       },
       {
-        nombre: 'Dra C. Diana de la Nuez Hernández',
+        nombre: 'Dr.C. Diana de la Nuez Hernández',
         facultad: 'Facultad de Ciencias Económicas y Empresariales'
       },
       {
-        nombre: 'Dr C. Alie Pérez Véliz',
+        nombre: 'Dr.C. Alie Pérez Véliz',
         facultad: 'Facultad de Ciencias Sociales y Humanísticas'
       },
       {
-        nombre: 'Dr. C. Orisel Hernández Aguilar',
+        nombre: 'Dr.C. Orisel Hernández Aguilar',
         facultad: 'Facultad de Ciencias Sociales y Humanísticas'
       },
       {
-        nombre: 'Dr. C. Orestes Rodríguez Musa',
+        nombre: 'Dr.C. Orestes Rodríguez Musa',
         facultad: 'Facultad de Ciencias Sociales y Humanísticas'
       },
       {
@@ -73,63 +74,63 @@ export class ScientificCouncilComponent implements OnInit {
         facultad: 'Facultad de Ciencias Sociales y Humanísticas'
       },
       {
-        nombre: 'Dr.C Jorge Luis Ferrer Cosme',
+        nombre: 'Dr.C. Jorge Luis Ferrer Cosme',
         facultad: 'Facultad de Ciencias Técnicas'
       },
       {
-        nombre: 'Dr.C Alina Alfonso Morejón',
+        nombre: 'Dr.C. Alina Alfonso Morejón',
         facultad: 'Facultad de Ciencias Técnicas'
       },
       {
-        nombre: 'Dr.C Arely Quintero Silverio',
+        nombre: 'Dr.C. Arely Quintero Silverio',
         facultad: 'Facultad de Ciencias Técnicas'
       },
       {
-        nombre: 'Dr.C Leonardo Aguiar Trujillo',
+        nombre: 'Dr.C. Leonardo Aguiar Trujillo',
         facultad: 'Facultad de Ciencias Técnicas'
       },
       {
-        nombre: 'Dr.C Robert Ramírez Hernández',
+        nombre: 'Dr.C. Robert Ramírez Hernández',
         facultad: 'Facultad de Ciencias Técnicas'
       },
       {
-        nombre: 'Dr.C José Raúl Vento Álvarez',
+        nombre: 'Dr.C. José Raúl Vento Álvarez',
         facultad: 'Facultad de Ciencias Técnicas'
       },
       {
-        nombre: 'Dr.C Norma Vicenta Cabrera Domínguez',
+        nombre: 'Dr.C. Norma Vicenta Cabrera Domínguez',
         facultad: 'Departamento de Formación Pedagógica General'
       },
       {
-        nombre: 'Dr.C Beatriz Páez Rodríguez',
+        nombre: 'Dr.C. Beatriz Páez Rodríguez',
         facultad: 'Departamento de Formación Pedagógica General'
       },
       {
-        nombre: 'Dr.C Tania Yakelyn Cala Peguero',
+        nombre: 'Dr.C. Tania Yakelyn Cala Peguero',
         facultad: 'Centro de Estudios en Ciencias de la Educación'
       },
       {
-        nombre: 'Dr.C Juan Lázaro Márquez Marrero',
+        nombre: 'Dr.C. Juan Lázaro Márquez Marrero',
         facultad: 'Centro de Estudios en Ciencias de la Educación'
       },
       {
-        nombre: 'Dr.C Ernesto López Calichs',
+        nombre: 'Dr.C. Ernesto López Calichs',
         facultad: 'Centro de Estudios en Ciencias de la Educación'
       },
       {
-        nombre: 'Dr.C Taymi Breijo Worosz',
+        nombre: 'Dr.C. Taymi Breijo Worosz',
         facultad: 'Centro de Estudios en Ciencias de la Educación'
       },
       {
-        nombre: 'Dr.C Niurka Castillo Rocubert',
+        nombre: 'Dr.C. Niurka Castillo Rocubert',
         facultad: 'Centro de Estudios de Medio Ambiente y Recursos Naturales'
       },
       {
-        nombre: 'Dr.C Evelyn Pérez Rodríguez',
+        nombre: 'Dr.C. Evelyn Pérez Rodríguez',
         facultad: 'Centro de Estudios de Medio Ambiente y Recursos Naturales'
       },
       {
-        nombre: 'DrC. Maidelyn Díaz Pérez',
+        nombre: 'Dr.C. Maidelyn Díaz Pérez',
         facultad: 'Centro de Recursos para el aprendizaje y la información'
       },
       {
@@ -137,111 +138,111 @@ export class ScientificCouncilComponent implements OnInit {
         facultad: 'Centro de Recursos para el aprendizaje y la información'
       },
       {
-        nombre: 'Dr. C. Dianelys Milagro León Lea',
+        nombre: 'Dr.C. Dianelys Milagro León Lea',
         facultad: 'Departamento de Enseñanza Militar'
       },
       {
-        nombre: 'Dr. C.: Nancy Amor Pérez',
+        nombre: 'Dr.C.: Nancy Amor Pérez',
         facultad: 'Departamento de Enseñanza Militar'
       },
       {
-        nombre: 'Dr. C. Yolainy Govea Díaz',
+        nombre: 'Dr.C. Yolainy Govea Díaz',
         facultad: 'Facultad Cultura Física'
       },
       {
-        nombre: 'Dr. C. Luis Alberto Cuesta Martínez',
+        nombre: 'Dr.C. Luis Alberto Cuesta Martínez',
         facultad: 'Facultad Cultura Física'
       },
       {
-        nombre: 'Dr. C. Pedro Alberto Martínez Hernández',
+        nombre: 'Dr.C. Pedro Alberto Martínez Hernández',
         facultad: 'Facultad Cultura Física'
       },
       {
-        nombre: 'Dr. C. Tania Rosa García Hernández',
+        nombre: 'Dr.C. Tania Rosa García Hernández',
         facultad: 'Facultad Cultura Física'
       },
       {
-        nombre: 'Dr. C. Orlando Pedro Suárez Pérez',
+        nombre: 'Dr.C. Orlando Pedro Suárez Pérez',
         facultad: 'Facultad Cultura Física'
       },
       {
-        nombre: 'Dr. C. Rosa María Tabares Arévalo',
+        nombre: 'Dr.C. Rosa María Tabares Arévalo',
         facultad: 'Facultad Cultura Física'
       },
       {
-        nombre: 'Dr.C Daniel Rojas Plasencia',
+        nombre: 'Dr.C. Daniel Rojas Plasencia',
         facultad: 'Educación Primaria'
       },
       {
-        nombre: 'Dr.C Ada Lucía Bonilla Bichot ',
+        nombre: 'Dr.C. Ada Lucía Bonilla Bichot ',
         facultad: 'Educación Primaria'
       },
       {
-        nombre: 'Dr.C Caridad de los Ángeles Pérez López',
+        nombre: 'Dr.C. Caridad de los Ángeles Pérez López',
         facultad: 'Educación Preescolar'
       },
       {
-        nombre: 'Dr.C Yanulde Massano Gálvez',
+        nombre: 'Dr.C. Yanulde Massano Gálvez',
         facultad: 'Educación Artística'
       },
       {
-        nombre: 'Dr.C Sayuris González Reyes',
+        nombre: 'Dr.C. Sayuris González Reyes',
         facultad: 'Educación Especial'
       },
       {
-        nombre: 'Dr.C Ana Isis Valdés Valdés',
+        nombre: 'Dr.C. Ana Isis Valdés Valdés',
         facultad: 'Educación Especial'
       },
       {
-        nombre: 'Dr.C Roberto Isbel Morejón Quintana',
+        nombre: 'Dr.C. Roberto Isbel Morejón Quintana',
         facultad: 'Facultad de Educación Media'
       },
       {
-        nombre: 'Dr.C Carlos Luis Fernández Peña',
+        nombre: 'Dr.C. Carlos Luis Fernández Peña',
         facultad: 'Facultad de Educación Media'
       },
       {
-        nombre: 'Dr.C Leydis Iglesia Triana',
+        nombre: 'Dr.C. Leydis Iglesia Triana',
         facultad: 'Facultad de Educación Media'
       },
       {
-        nombre: 'Dr.C Caridad Amado Paula Acosta',
+        nombre: 'Dr.C. Caridad Amado Paula Acosta',
         facultad: 'Facultad de Educación Media'
       },
       {
-        nombre: 'Dr.C Karina Machín Hernández',
+        nombre: 'Dr.C. Karina Machín Hernández',
         facultad: 'Facultad de Educación Media'
       },
       {
-        nombre: 'Dr.C Jorge Candelario Milian',
+        nombre: 'Dr.C. Jorge Candelario Milian',
         facultad: 'Facultad de Educación Media'
       },
       {
-        nombre: 'Dr.C Luis Mijares Núñez',
+        nombre: 'Dr.C. Luis Mijares Núñez',
         facultad: 'Departamento de Lenguas Extranjeras'
       },
       {
-        nombre: 'Dr. C. Gretel Geada López',
+        nombre: 'Dr.C. Gretel Geada López',
         facultad: 'Facultad de Ciencias Forestales y Agropecuarias'
       },
       {
-        nombre: 'Dr. C. Alexei Yoan Martínez Robaina',
+        nombre: 'Dr.C. Alexei Yoan Martínez Robaina',
         facultad: 'Facultad de Ciencias Forestales y Agropecuarias'
       },
       {
-        nombre: 'Dr. C. Daniel Alberto Álvarez Lazo',
+        nombre: 'Dr.C. Daniel Alberto Álvarez Lazo',
         facultad: 'Facultad de Ciencias Forestales y Agropecuarias'
       },
       {
-        nombre: 'Dr. C. Héctor Barrero Medel',
+        nombre: 'Dr.C. Héctor Barrero Medel',
         facultad: 'Facultad de Ciencias Forestales y Agropecuarias'
       },
       {
-        nombre: 'Dr. C. Jesús Torres Domínguez',
+        nombre: 'Dr.C. Jesús Torres Domínguez',
         facultad: 'Facultad de Ciencias Forestales y Agropecuarias'
       },
       {
-        nombre: 'Dra. C. Mariol Morejón García',
+        nombre: 'Dr.C. Mariol Morejón García',
         facultad: 'Facultad de Ciencias Forestales y Agropecuarias'
       },
     ];

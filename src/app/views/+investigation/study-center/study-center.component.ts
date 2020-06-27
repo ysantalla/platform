@@ -34,7 +34,7 @@ export class StudyCenterComponent implements OnInit {
       {
         name: 'Centro de Estudios del Deporte y la Actividad Física',
         link: 'http://cedaf.upr.edu.cu',
-        logo: './assets/img/logos/CEDAF.png'
+        logo: './assets/img/logos/CEEDAR.png'
       },
       {
         name: 'Centro de Estudios de Dirección, Desarrollo Local, Turismo y Cooperativismo',

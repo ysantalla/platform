@@ -66,7 +66,7 @@
             </button>
 
             <button mat-button [matMenuTriggerFor]="universityMenu" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">
-              <span class="button-text">{{teaching.heading | transloco}}</span>
+              <span class="button-text">{{university.heading | transloco}}</span>
               <mat-menu #universityMenu="matMenu">
                   <button *ngFor="let page of university.pages" mat-menu-item [routerLink]="page.link" routerLinkActive="active">{{page.heading | transloco}}</button>
               </mat-menu>

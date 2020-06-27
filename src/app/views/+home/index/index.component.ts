@@ -19,6 +19,8 @@ export class IndexComponent implements OnInit {
   otherColor: string;
   numbers: Numbers;
 
+  cover: string = `url('./assets/img/portada.jpg')`;
+
   customOptions: OwlOptions = {
     loop: true,
     dots: true,
@@ -55,6 +57,10 @@ export class IndexComponent implements OnInit {
   ngOnInit() {
     this.color = 'white';
     this.otherColor = 'green';
+
+    if (Math.random() >= 0.5) {
+      this.cover = `url('./assets/img/graduado.jpg')`;
+    }
   }
 
 }

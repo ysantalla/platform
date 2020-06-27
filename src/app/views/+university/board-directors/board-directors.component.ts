@@ -85,9 +85,9 @@ export class BoardDirectorsComponent implements OnInit {
         telefono: '(53) 48 779358'
       },
       {
-        nombre: 'Dr.C. Roberto Barrera',
+        nombre: 'Dr.C Roberto Barrera Jiménez',
         cargo: 'Decano Facultad de Ciencias Técnicas',
-        telefono: '(53) 48 779358'
+        telefono: '(53) 48 755453'
       },
       {
         nombre: 'Dr.C. Jose Almeida Cordero Mederos',

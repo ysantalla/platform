@@ -38,11 +38,10 @@
 
 </header> -->
 
-<header class="banner" style="
-  background-image: url('./assets/img/portada.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;">
+<header class="banner"
+  [ngStyle]="{'background-image': cover}"
+
+>
 
   <div class="container" fxLayout="row wrap" style="height: 95vh; background-color: rgba(16, 98, 42, .8);"
     fxLayoutAlign="center center">
