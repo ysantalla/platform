@@ -22,22 +22,15 @@ import {
 
       <mat-divider fxFlex="1 1 100%"></mat-divider>
 
-      <article>
-        <div
-          class="container"
-          fxLayout="row wrap"
-          fxLayoutAlign="center center"
-          fxFlex="1 1 100%"
-          [@FadeInOut]
-        >
-          <div class="item" style="padding-top: 30px; padding-bottom: 30px;"
-             fxFlex="1 1 100%" fxFlex.lt-md="1 1 100%" fxLayout="row wrap" fxLayoutAlign="center center">
 
-            <img width="100%" src="./assets/img/matricula.png">
+    </div>
 
-          </div>
-        </div>
-      </article>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="center center">
+    <div fxLayout="row wrap" fxFlex="1 1 93%" fxFlex.lt-md="1 1 100%" fxLayoutAlign="center center">
+
+      <app-enrollment-svg fxFlex="1 1 100%"></app-enrollment-svg>
+
     </div>
 
     </div>

@@ -7,6 +7,7 @@ import { IndexComponent } from './index/index.component';
 import { EnrollmentComponent } from './enrollment/enrollment.component';
 import { UndergraduateComponent } from './undergraduate/undergraduate.component';
 import { PostgraduateComponent } from './postgraduate/postgraduate.component';
+import { EnrollmentSvgComponent } from './enrollment-svg/enrollment-svg.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,6 @@ const routes: Routes = [
     SharedModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [IndexComponent, EnrollmentComponent, UndergraduateComponent, PostgraduateComponent]
+  declarations: [IndexComponent, EnrollmentComponent, UndergraduateComponent, PostgraduateComponent, EnrollmentSvgComponent]
 })
 export class TeachingModule { }

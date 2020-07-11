@@ -10,6 +10,7 @@ interface CD {
   nombre: string;
   cargo: string;
   telefono: string;
+  foto?: string;
 }
 
 @Component({
@@ -47,72 +48,86 @@ export class BoardDirectorsComponent implements OnInit {
       {
         nombre: 'Dr.C. Yorki Mayor Hernández',
         cargo: 'Rector',
-        telefono: '(53) 48 779348/ (53) 48 777923'
+        telefono: '(53) 48 779348/ (53) 48 777923',
+        foto: 'Yorki.jpeg'
       },
       {
         nombre: 'Dr.C. Mario Luis Gómez Ivizate',
         cargo: 'Vicerrector Primero',
-        telefono: '(53) 48 728623'
+        telefono: '(53) 48 728623',
+        foto: 'Mario.jpeg'
       },
       {
         nombre: 'Dr.C. Saray Nuñez González',
         cargo: 'Vicerrector de Investigación, Informatización y Postgrado',
-        telefono: '(53) 48 728622'
+        telefono: '(53) 48 728622',
+        foto: 'Zaray.jpeg'
       },
       {
         nombre: 'Dr.C. María Cristina Salabarría Márquez',
-        cargo: 'Vicerrector',
-        telefono: '(53) 48 779349'
+        cargo: 'Vicerrector de Extensión Universitaria y Relaciones Internacionales',
+        telefono: '(53) 48 779349',
+        foto: 'Cristina.jpeg'
       },
       {
         nombre: 'MSc. Reinier González Garrido',
-        cargo: 'Director general',
-        telefono: '(53) 48728624/ (53) 48 753009'
+        cargo: 'Director General de Administración y Servicios',
+        telefono: '(53) 48728624/ (53) 48 753009',
+        foto: 'Reinier.jpeg'
       },
       {
         nombre: 'MSc. Yosvany Barrios Hernández',
-        cargo: 'Director general',
-        telefono: '(53) 48 759728'
+        cargo: 'Director General de Economía y Recursos Humanos',
+        telefono: '(53) 48 759728',
+        foto: 'Yosvani.jpeg'
       },
       {
         nombre: 'Dr.C. Luís Wilfredo Martínez Becerra',
         cargo: 'Decano Facultad de Ciencias Forestales y Agropecuarias',
-        telefono: '(53) 48 775452'
+        telefono: '(53) 48 775452',
+        foto: 'Wilfredo.jpeg'
       },
       {
         nombre: 'Dr.C. Dianelkys Martínez Rodríguez',
-        cargo: 'Decano Facultad de Ciencias Sociales y Humanísticas',
-        telefono: '(53) 48 779358'
+        cargo: 'Decano Facultad de Ciencias Sociales y Humanidades',
+        telefono: '(53) 48 779358',
+        foto: 'Dianelkys.jpeg'
       },
       {
         nombre: 'Dr.C Roberto Barrera Jiménez',
         cargo: 'Decano Facultad de Ciencias Técnicas',
-        telefono: '(53) 48 755453'
+        telefono: '(53) 48 755453',
+        foto: 'Robe.jpeg'
       },
       {
         nombre: 'Dr.C. Jose Almeida Cordero Mederos',
         cargo: 'Decano Facultad de Ciencias Económicas y Empresariales',
-        telefono: '(53) 48 754289'
+        telefono: '(53) 48 754289',
+        foto: 'Jose.jpeg'
       },
       {
         nombre: 'DrC. Julio Antonio Conill Armenteros',
         cargo: 'Decano Facultad de Educación Infantil',
-        telefono: '(53) 48 785102'
+        telefono: '(53) 48 785102',
+        foto: 'Conil.jpeg'
       },
       {
         nombre: 'Dr.C. Roberto Isbel Morejón Quintana',
         cargo: 'Decano Facultad de Educación Media',
-        telefono: '(53) 48 767310'
+        telefono: '(53) 48 767310',
+        foto: 'Roberto.jpeg'
       },
       {
         nombre: 'MSc. Yadira Pérez Díaz',
         cargo: 'Decana Facultad de Cultura Física',
-        telefono: '(53) 48 728254'
+        telefono: '(53) 48 728254',
+        foto: 'Yadira.jpeg'
       },
       {
         nombre: 'MSc. Magalys González Hernández',
         cargo: 'Secretaria General',
-        telefono: '(53) 48 779354'
+        telefono: '(53) 48 779354',
+        foto: 'Magalys.jpeg'
       },
       {
         nombre: 'Lic. José Enrique Jiménez Barrera',
@@ -127,7 +142,8 @@ export class BoardDirectorsComponent implements OnInit {
       {
         nombre: 'Lic. Ana Teresa Zubizarreta Santos',
         cargo: 'Asesora del Rector',
-        telefono: '(53) 48 779348/ (53) 48 777923'
+        telefono: '(53) 48 779348/ (53) 48 777923',
+        foto: 'AnaTeresa.jpeg'
       },
     ];
 

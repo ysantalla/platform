@@ -107,19 +107,19 @@ export class ScientificCouncilComponent implements OnInit {
       },
       {
         nombre: 'Dr.C. Tania Yakelyn Cala Peguero',
-        facultad: 'Centro de Estudios en Ciencias de la Educación'
+        facultad: 'Centro de Estudios de Ciencias de la Educación'
       },
       {
         nombre: 'Dr.C. Juan Lázaro Márquez Marrero',
-        facultad: 'Centro de Estudios en Ciencias de la Educación'
+        facultad: 'Centro de Estudios de Ciencias de la Educación'
       },
       {
         nombre: 'Dr.C. Ernesto López Calichs',
-        facultad: 'Centro de Estudios en Ciencias de la Educación'
+        facultad: 'Centro de Estudios de Ciencias de la Educación'
       },
       {
         nombre: 'Dr.C. Taymi Breijo Worosz',
-        facultad: 'Centro de Estudios en Ciencias de la Educación'
+        facultad: 'Centro de Estudios de Ciencias de la Educación'
       },
       {
         nombre: 'Dr.C. Niurka Castillo Rocubert',
@@ -131,11 +131,11 @@ export class ScientificCouncilComponent implements OnInit {
       },
       {
         nombre: 'Dr.C. Maidelyn Díaz Pérez',
-        facultad: 'Centro de Recursos para el aprendizaje y la información'
+        facultad: 'Centro de Recursos para el Aprendizaje y la Investigación'
       },
       {
         nombre: 'MSc. Mabel Rodriguez Poo',
-        facultad: 'Centro de Recursos para el aprendizaje y la información'
+        facultad: 'Centro de Recursos para el Aprendizaje y la Investigación'
       },
       {
         nombre: 'Dr.C. Dianelys Milagro León Lea',
@@ -171,27 +171,27 @@ export class ScientificCouncilComponent implements OnInit {
       },
       {
         nombre: 'Dr.C. Daniel Rojas Plasencia',
-        facultad: 'Educación Primaria'
+        facultad: 'Departamento de Educación Primaria'
       },
       {
         nombre: 'Dr.C. Ada Lucía Bonilla Bichot ',
-        facultad: 'Educación Primaria'
+        facultad: 'Departamento de Educación Primaria'
       },
       {
         nombre: 'Dr.C. Caridad de los Ángeles Pérez López',
-        facultad: 'Educación Preescolar'
+        facultad: 'Departamento de Educación Preescolar'
       },
       {
         nombre: 'Dr.C. Yanulde Massano Gálvez',
-        facultad: 'Educación Artística'
+        facultad: 'Departamento de Educación Artística'
       },
       {
         nombre: 'Dr.C. Sayuris González Reyes',
-        facultad: 'Educación Especial'
+        facultad: 'Departamento de Educación Especial'
       },
       {
         nombre: 'Dr.C. Ana Isis Valdés Valdés',
-        facultad: 'Educación Especial'
+        facultad: 'Departamento de Educación Especial'
       },
       {
         nombre: 'Dr.C. Roberto Isbel Morejón Quintana',

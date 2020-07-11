@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { IndexComponent } from './index/index.component';
 import { BoardDirectorsComponent } from './board-directors/board-directors.component';
+import { UniversityComponent } from './university/university.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,6 @@ const routes: Routes = [
     SharedModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [IndexComponent, BoardDirectorsComponent]
+  declarations: [IndexComponent, BoardDirectorsComponent, UniversityComponent]
 })
 export class UniversityModule { }
